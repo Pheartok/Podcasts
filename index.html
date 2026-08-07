@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Podcast Hub | Embersmith Studios</title>
-    <meta name="description" content="Official podcast homepage featuring latest audio episodes and stream links.">
+    <meta name="description" content="Official podcast homepage featuring the latest episode from Spotify.">
 
     <!-- SEO Schema Markup for Podcasts -->
     <script type="application/ld+json">
@@ -25,7 +25,7 @@
         :root {
             --bg-color: #0f1117;
             --card-bg: #1a1d26;
-            --accent-color: #e65c00;
+            --accent-color: #1DB954; /* Spotify Green */
             --text-main: #f0f0f0;
             --text-muted: #9a9eab;
         }
@@ -42,7 +42,7 @@
         header {
             text-align: center;
             padding: 3rem 1rem 2rem;
-            background: linear-gradient(180deg, rgba(230,92,0,0.15) 0%, rgba(15,17,23,0) 100%);
+            background: linear-gradient(180deg, rgba(29,185,84,0.15) 0%, rgba(15,17,23,0) 100%);
         }
 
         h1 {
@@ -83,15 +83,15 @@
             color: var(--accent-color);
         }
 
-        .btn-primary {
+        .btn-spotify {
             background-color: var(--accent-color);
-            color: #ffffff;
+            color: #000000;
             border: none;
         }
 
-        .btn-primary:hover {
-            background-color: #ff6a00;
-            color: #ffffff;
+        .btn-spotify:hover {
+            background-color: #1ed760;
+            color: #000000;
         }
 
         main {
@@ -108,38 +108,10 @@
             border: 1px solid #2e3344;
         }
 
-        .player-card h2 {
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
-        audio {
-            width: 100%;
+        .spotify-embed {
             margin-top: 1rem;
-        }
-
-        .episode-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .episode-item {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.2rem;
-            border: 1px solid #252936;
-        }
-
-        .episode-item h3 {
-            margin: 0 0 0.4rem 0;
-            font-size: 1.1rem;
-        }
-
-        .episode-date {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         footer {
@@ -158,35 +130,28 @@
         <p class="subtitle">Official audio stream for news, updates, and deep dives.</p>
 
         <div class="subscribe-links">
-            <!-- Replace these URLs with your actual platform or smart links -->
-            <a href="#" class="btn btn-primary">Listen on Spotify</a>
-            <a href="#" class="btn">Apple Podcasts</a>
-            <a href="#" class="btn">RSS Feed</a>
+            <a href="https://open.spotify.com/episode/6xnEKfaiffqfOTL5NSlhjv" target="_blank" rel="noopener" class="btn btn-spotify">Listen on Spotify</a>
         </div>
     </header>
 
     <main>
         <!-- Featured / Latest Episode Section -->
         <section class="player-card">
-            <h2>Latest Episode: Introduction</h2>
-            <p class="episode-date">Published: August 2026</p>
-            <p>Welcome to the first official broadcast. Stream directly from the player below or subscribe on your favorite podcast app.</p>
+            <h2>Latest Episode</h2>
             
-            <!-- Replace src with your hosted audio URL or embed iframe from Podbean/Spotify -->
-            <audio controls>
-                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
-
-        <!-- Episode Archive -->
-        <h2>All Episodes</h2>
-        <section class="episode-list">
-            <article class="episode-item">
-                <h3>Episode 1: Building local-first tools</h3>
-                <div class="episode-date">August 7, 2026</div>
-                <p>An overview of site structures, zero-maintenance setups, and modern deployment pipelines.</p>
-            </article>
+            <!-- Spotify Embedded Player -->
+            <div class="spotify-embed">
+                <iframe 
+                    style="border-radius:12px" 
+                    src="https://open.spotify.com/embed/episode/6xnEKfaiffqfOTL5NSlhjv?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
         </section>
     </main>
 
