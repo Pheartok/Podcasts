@@ -1,1 +1,198 @@
-Thi is just place holder text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Podcast Hub | Embersmith Studios</title>
+    <meta name="description" content="Official podcast homepage featuring latest audio episodes and stream links.">
+
+    <!-- SEO Schema Markup for Podcasts -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      "name": "The Embersmith Podcast",
+      "description": "Discussions on game development, creative projects, and deep lore.",
+      "url": "https://podcasts.pages.dev",
+      "author": {
+        "@type": "Organization",
+        "name": "Embersmith Studios"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f1117;
+            --card-bg: #1a1d26;
+            --accent-color: #e65c00;
+            --text-main: #f0f0f0;
+            --text-muted: #9a9eab;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: linear-gradient(180deg, rgba(230,92,0,0.15) 0%, rgba(15,17,23,0) 100%);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .subscribe-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #2e3344;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6a00;
+            color: #ffffff;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem 4rem;
+        }
+
+        .player-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #2e3344;
+        }
+
+        .player-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .episode-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.2rem;
+            border: 1px solid #252936;
+        }
+
+        .episode-item h3 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.1rem;
+        }
+
+        .episode-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #1a1d26;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The Podcast</h1>
+        <p class="subtitle">Official audio stream for news, updates, and deep dives.</p>
+
+        <div class="subscribe-links">
+            <!-- Replace these URLs with your actual platform or smart links -->
+            <a href="#" class="btn btn-primary">Listen on Spotify</a>
+            <a href="#" class="btn">Apple Podcasts</a>
+            <a href="#" class="btn">RSS Feed</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Featured / Latest Episode Section -->
+        <section class="player-card">
+            <h2>Latest Episode: Introduction</h2>
+            <p class="episode-date">Published: August 2026</p>
+            <p>Welcome to the first official broadcast. Stream directly from the player below or subscribe on your favorite podcast app.</p>
+            
+            <!-- Replace src with your hosted audio URL or embed iframe from Podbean/Spotify -->
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Episode Archive -->
+        <h2>All Episodes</h2>
+        <section class="episode-list">
+            <article class="episode-item">
+                <h3>Episode 1: Building local-first tools</h3>
+                <div class="episode-date">August 7, 2026</div>
+                <p>An overview of site structures, zero-maintenance setups, and modern deployment pipelines.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Embersmith Studios. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
