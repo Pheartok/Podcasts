@@ -10,14 +10,28 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "PodcastSeries",
-      "name": "Warp & Wire: Worlds & Wonders",
-      "description": "Official audio stream for technology, supply chains, and macroeconomics.",
-      "url": "https://podcasts-782.pages.dev",
-      "author": {
-        "@type": "Organization",
-        "name": "Embersmith Studios"
-      }
+      "@graph": [
+        {
+          "@type": "PodcastSeries",
+          "@id": "https://podcasts-782.pages.dev/#series",
+          "name": "Warp & Wire: Worlds & Wonders",
+          "description": "Official audio stream for technology, supply chains, and macroeconomics.",
+          "url": "https://podcasts-782.pages.dev",
+          "author": {
+            "@type": "Organization",
+            "name": "Embersmith Studios"
+          }
+        },
+        {
+          "@type": "PodcastEpisode",
+          "@id": "https://podcasts-782.pages.dev/#episode-7DPNjhZeWbMflbpds43f58",
+          "partOfSeries": {
+            "@id": "https://podcasts-782.pages.dev/#series"
+          },
+          "name": "Latest Episode",
+          "url": "https://open.spotify.com/episode/7DPNjhZeWbMflbpds43f58"
+        }
+      ]
     }
     </script>
 
@@ -119,7 +133,7 @@
         <p class="subtitle">Official audio stream for technology, supply chains, and macroeconomics.</p>
 
         <div class="subscribe-links">
-            <a href="https://open.spotify.com/episode/3bs9HOlrbw9jl8NTYK2niJ?si=IepSfn7jTAC6Ba6KHvKheQ" target="_blank" rel="noopener noreferrer" class="btn">
+            <a href="https://open.spotify.com/episode/7DPNjhZeWbMflbpds43f58" target="_blank" rel="noopener noreferrer" class="btn">
                 Listen to Latest Episode on Spotify
             </a>
         </div>
@@ -134,7 +148,7 @@
             <div class="spotify-embed">
                 <iframe 
                     style="border-radius:12px" 
-                    src="https://open.spotify.com/episode/7DPNjhZeWbMflbpds43f58?si=Hy3rRTj0R7KrDvbI_-gb9A&utm_source=copy-link"
+                    src="https://open.spotify.com/embed/episode/7DPNjhZeWbMflbpds43f58?utm_source=generator"
                     width="100%" 
                     height="152" 
                     frameBorder="0" 
